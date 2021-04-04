@@ -3,6 +3,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Input } from '../components/Form/Input';
+import { useRouter } from "next/router";
+import Head from "next/head";
 
 type SignInFormData = {
   email: string;
@@ -15,13 +17,17 @@ const signInFormSchema = yup.object().shape({
 })
 
 export default function SignIn() {
+  const router = useRouter();
+
   const { register, handleSubmit, formState } = useForm({
     resolver: yupResolver(signInFormSchema)
   })
 
   const handleSignIn: SubmitHandler<SignInFormData> = async (values) => {
     await new Promise (resolve => setTimeout(resolve, 2000))
-    console.log(values)
+    if(!!formState.errors) {
+      router.push('/dashboard')
+    }
   }
 
   return (
@@ -31,6 +37,9 @@ export default function SignIn() {
       align="center"
       justify="center"
     >
+      <Head>
+        <title>Login | dashgo.</title>
+      </Head>
       <Flex
         as="form"
         width="100%"

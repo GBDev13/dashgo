@@ -6,6 +6,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import Head from "next/head";
 
 type CreateUserFormData = {
   name:string;
@@ -36,6 +37,9 @@ export default function CreateUser() {
 
   return (
     <Box>
+    <Head>
+      <title>Criar usuário | dashgo.</title>
+    </Head>
       <Header />
       
       <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
