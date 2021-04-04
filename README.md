@@ -1,4 +1,4 @@
-# Dashgo 💜 | Dashboard responsivo feito com Chakra UI
+# Dashgo 💜 | Dashboard feito com Chakra UI
 
 &nbsp;
 
@@ -64,7 +64,7 @@ $ yarn start
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo de [LICENÇA](https://github.com/GBDev13/ignews/blob/main/LICENSE) para detalhes.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo de [LICENÇA](https://github.com/GBDev13/dashgo/blob/main/LICENSE) para detalhes.
 
 
 ---
